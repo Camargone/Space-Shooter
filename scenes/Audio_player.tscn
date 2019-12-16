@@ -1,0 +1,35 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://sounds/music2.ogg" type="AudioStream" id=1]
+[ext_resource path="res://sounds/explosion.wav" type="AudioStream" id=2]
+[ext_resource path="res://sounds/hit_enemy.wav" type="AudioStream" id=3]
+[ext_resource path="res://sounds/laser_ship.wav" type="AudioStream" id=4]
+[ext_resource path="res://sounds/powerup.wav" type="AudioStream" id=5]
+[ext_resource path="res://sounds/laser_enemy.wav" type="AudioStream" id=6]
+[ext_resource path="res://sounds/hit_ship.wav" type="AudioStream" id=7]
+
+[node name="Audio_player" type="Node"]
+
+[node name="soundtrack" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )
+autoplay = true
+
+[node name="audio_explosions" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+
+[node name="audio_hit" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+
+[node name="audio_laser_ship" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+pitch_scale = 0.5
+
+[node name="audio_powerup" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+pitch_scale = 0.6
+
+[node name="audio_laser_enemy" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+
+[node name="audio_armor_damage" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
